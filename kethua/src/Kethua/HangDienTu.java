@@ -36,7 +36,6 @@ public class HangDienTu extends SanPham{
             System.out.println("Moi ban nhap san pham thu " + (i +1 ) + ": ");
             System.out.println("Moi ban nhap MSP");
             maSp[i] = scanner.nextLine();
-
             System.out.println("Moi ban nhap TSP");
             tenSp[i] = scanner.nextLine();
             System.out.println("Moi ban nhap ngay san xuat:");
@@ -54,14 +53,14 @@ public class HangDienTu extends SanPham{
         }
     }
     public void xuat(){
-        System.out.println("=================================THONG TIN SAN PHAM=================================");
+        System.out.println("================================================THONG TIN SAN PHAM==========================================================");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |%15s |",
                 "MSp", "TSP", "NSX", "Trong Luong", "Mau Sac", "Dong Dien", "Cong Suat"));
         for (int i = 0; i < maSp.length; i++) {
             System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |%15s |",
                     maSp[i], tenSp[i], ngaSX[i], trongLuong[i], mauSac[i], dongDien[i], congSuat[i]));
         }
-        System.out.println("========================================================================");
+        System.out.println("============================================================================================================================");
     }
 
     public void trongLuongThapNhat(){
@@ -99,14 +98,14 @@ public class HangDienTu extends SanPham{
                 }
             }
         }
-        System.out.println("=================================trong Luong Thap nhat=================================");
+        System.out.println("============================================SAN PHAM CO TRONG LUONG MIN=====================================================");
         System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |%15s |",
                 "MSp", "TSP", "NSX", "Trong Luong", "Mau Sac", "Dong Dien", "Cong Suat"));
         for (int i = 0; i < trongLuong.length; i++) {
             System.out.println(String.format("%-5s | %-30s | %10s | %15s | %15s | %15s |%15s |",
                     maSp[i], tenSp[i], ngaSX[i], trongLuong[i], mauSac[i], dongDien[i], congSuat[i]));
         }
-        System.out.println("========================================================================");
+        System.out.println("============================================================================================================================");
 
     }
 
