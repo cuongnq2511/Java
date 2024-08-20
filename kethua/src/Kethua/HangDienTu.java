@@ -36,7 +36,7 @@ public class HangDienTu extends SanPham{
             System.out.println("Moi ban nhap san pham thu " + (i +1 ) + ": ");
             System.out.println("Moi ban nhap MSP");
             maSp[i] = scanner.nextLine();
-            scanner.nextLine();
+
             System.out.println("Moi ban nhap TSP");
             tenSp[i] = scanner.nextLine();
             System.out.println("Moi ban nhap ngay san xuat:");
@@ -65,38 +65,37 @@ public class HangDienTu extends SanPham{
     }
 
     public void trongLuongThapNhat(){
-        for (int i = 0; i < trongLuong.length -1 ; i++) {
-            for (int j = 0; j < trongLuong.length -1 - i ; j++) {
-                if (trongLuong[i] > trongLuong[j ]){
+        for (int i = 0; i < trongLuong.length - 1; i++) {
+            for (int j = i + 1; j < trongLuong.length; j++) {
+                if (trongLuong[i] > trongLuong[j]) {
 
-                    float tempTrongLuong = trongLuong[j];
-                    trongLuong[j] = trongLuong[j + 1];
-                    trongLuong[j + 1] = tempTrongLuong;
+                    float tempTrongLuong = trongLuong[i];
+                    trongLuong[i] = trongLuong[j];
+                    trongLuong[j] = tempTrongLuong;
 
+                    String tempMaSp = maSp[i];
+                    maSp[i] = maSp[j];
+                    maSp[j] = tempMaSp;
 
-                    String tempMaSp = maSp[j];
-                    maSp[j] = maSp[j + 1];
-                    maSp[j + 1] = tempMaSp;
+                    String tempTenSp = tenSp[i];
+                    tenSp[i] = tenSp[j];
+                    tenSp[j] = tempTenSp;
 
-                    String tempTenSp = tenSp[j];
-                    tenSp[j] = tenSp[j + 1];
-                    tenSp[j + 1] = tempTenSp;
+                    String tempNhaSX = ngaSX[i];
+                    ngaSX[i] = ngaSX[j];
+                    ngaSX[j] = tempNhaSX;
 
-                    String tempNhaSX = ngaSX[j];
-                    ngaSX[j] = ngaSX[j + 1];
-                    ngaSX[j + 1] = tempNhaSX;
+                    String tempMauSac = mauSac[i];
+                    mauSac[i] = mauSac[j];
+                    mauSac[j] = tempMauSac;
 
-                    String tempMauSac = mauSac[j];
-                    mauSac[j] = mauSac[j + 1];
-                    mauSac[j + 1] = tempMauSac;
+                    float tempCongSuat = congSuat[i];
+                    congSuat[i] = congSuat[j];
+                    congSuat[j] = tempCongSuat;
 
-                    float tempCongSuat = congSuat[j];
-                    congSuat[j] = congSuat[j + 1];
-                    congSuat[j + 1] = tempCongSuat;
-
-                    String tempDongDien = dongDien[j];
-                    dongDien[j] = dongDien[j + 1];
-                    dongDien[j + 1] = tempDongDien;
+                    String tempDongDien = dongDien[i];
+                    dongDien[i] = dongDien[j];
+                    dongDien[j] = tempDongDien;
                 }
             }
         }
