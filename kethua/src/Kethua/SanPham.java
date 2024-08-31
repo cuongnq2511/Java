@@ -3,17 +3,16 @@ package Kethua;
 
 public class SanPham {
 
-    protected String[] maSp;
-    protected String[] tenSp;
-    protected String[] ngaSX;
-    protected float[] trongLuong;
-    protected String[] mauSac;
+    protected String maSp;
+    protected String tenSp;
+    protected String ngaSX;
+    protected float trongLuong;
+    protected String mauSac;
 
     public SanPham() {
     }
 
-
-    public SanPham(String[] maSp, String[] tenSp, String[] ngaSX, float[] trongLuong, String[] mauSac) {
+    public SanPham(String maSp, String tenSp, String ngaSX, float trongLuong, String mauSac) {
         this.maSp = maSp;
         this.tenSp = tenSp;
         this.ngaSX = ngaSX;
@@ -21,43 +20,43 @@ public class SanPham {
         this.mauSac = mauSac;
     }
 
-    public String[] getMaSp() {
+    public String getMaSp() {
         return maSp;
     }
 
-    public void setMaSp(String[] maSp) {
+    public void setMaSp(String maSp) {
         this.maSp = maSp;
     }
 
-    public String[] getTenSp() {
+    public String getTenSp() {
         return tenSp;
     }
 
-    public void setTenSp(String[] tenSp) {
+    public void setTenSp(String tenSp) {
         this.tenSp = tenSp;
     }
 
-    public String[] getNgaSX() {
+    public String getNgaSX() {
         return ngaSX;
     }
 
-    public void setNgaSX(String[] ngaSX) {
+    public void setNgaSX(String ngaSX) {
         this.ngaSX = ngaSX;
     }
 
-    public float[] getTrongLuong() {
+    public float getTrongLuong() {
         return trongLuong;
     }
 
-    public void setTrongLuong(float[] trongLuong) {
+    public void setTrongLuong(float trongLuong) {
         this.trongLuong = trongLuong;
     }
 
-    public String[] getMauSac() {
+    public String getMauSac() {
         return mauSac;
     }
 
-    public void setMauSac(String[] mauSac) {
+    public void setMauSac(String mauSac) {
         this.mauSac = mauSac;
     }
 }

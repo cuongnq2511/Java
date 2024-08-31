@@ -5,7 +5,11 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        HangDienTu hangDienTu = new HangDienTu();
+        int n;
+        System.out.println("Moi ban nhap so luong hang dien tu :");
+        n = scanner.nextInt();
+
+        HangDienTu[] hangDienTu = new HangDienTu[n];
         int menu;
         do {
             System.out.println("===========================MENU===========================");
@@ -21,13 +25,13 @@ public class main {
 
             switch (menu){
                 case 1:
-                    hangDienTu.nhap();
+                    nhapDanhSach(hangDienTu, n);
                     break;
                 case 2:
-                    hangDienTu.xuat();
+                    xuatDanhSach(hangDienTu);
                     break;
                 case 3:
-                    hangDienTu.trongLuongThapNhat();
+                    matHangThapNhat(hangDienTu);
                     break;
                 case 0:
                     System.out.println("Ban chon thoat! ");
@@ -38,5 +42,36 @@ public class main {
             }
 
         }while (menu !=0);
+    }
+    protected static void nhapDanhSach(HangDienTu[]hangDienTu,int n){
+        System.out.println("==================Nhap thong tin====================");
+        for (int i = 0; i < n; i++) {
+            System.out.println("Moi ban nhap san pham thu " + (i + 1) + " :");
+            hangDienTu[i] = new HangDienTu();
+            hangDienTu[i].nhap();
+        }
+    }
+    protected static void xuatDanhSach(HangDienTu[]hangDienTu){
+        System.out.println("===============================================THONG TIN SAN PHAM=========================================");
+        System.out.printf("%-10s | %-20s | %-12s | %-12s | %-10s | %-10s | %-10s%n",
+                "Ma SP", "Ten SP", "Ngay SX", "Trong luong", "Mau sac", "Cong suat", "Dong dien");
+        for (int i = 0; i < hangDienTu.length; i++) {
+            hangDienTu[i].xuat();
+        }
+    }
+
+    protected static void matHangThapNhat(HangDienTu[] hangDienTu){
+        float min = hangDienTu[0].trongLuong;
+        for (int i = 0; i <hangDienTu.length ; i++) {
+            min = Math.min(min,hangDienTu[i].trongLuong);
+        }
+        System.out.println("===================================THONG TIN SAN PHAM CO TRONG LUONG MIN=====================================");
+        System.out.printf("%-10s | %-20s | %-12s | %-12s | %-10s | %-10s | %-10s%n",
+                "Ma SP", "Ten SP", "Ngay SX", "Trong luong", "Mau sac", "Cong suat", "Dong dien");
+        for (int i = 0; i < hangDienTu.length; i++) {
+            if (min == hangDienTu[i].trongLuong){
+                hangDienTu[i].xuat();
+            }
+        }
     }
 }
