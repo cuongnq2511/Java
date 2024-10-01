@@ -29,6 +29,10 @@ public class NhanSu {
         System.out.println("Gioi tinh: " + gioiTinh);
     }
 
+    public double tinhLuong(){
+        return 0;
+    }
+
     public int getMaNs() {
         return maNs;
     }

@@ -33,7 +33,7 @@ public class CanBo extends NhanSu{
         System.out.println("Xep loai " +xepLoai);
         System.out.println("Luong" +luong);
     }
-    public void tinhLuong(){
+    public double tinhLuong(){
         if (xepLoai.equals("A")) {
             this.luong = heSoLuong * 1150000 + 1000000;
         } else if (xepLoai.equals("B")) {
@@ -43,6 +43,7 @@ public class CanBo extends NhanSu{
         } else {
             this.luong = heSoLuong * 1150000 - 1000000;
         }
+        return 0;
     }
 
     public Phong getPhong() {

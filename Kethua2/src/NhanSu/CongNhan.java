@@ -32,7 +32,7 @@ public class CongNhan extends NhanSu{
         System.out.println("Luong" + luong);
     }
 
-    public void tinhLuong(){
+    public double tinhLuong(){
         if (soNgayCong >= 23) {
             this.luong = soNgayCong * 250000 + 500000;
         } else if (soNgayCong >= 20) {
@@ -42,6 +42,7 @@ public class CongNhan extends NhanSu{
         } else {
             this.luong = soNgayCong * 250000 - 200000;
         }
+        return 0;
     }
 
     public XuongSX getXuongSX() {
