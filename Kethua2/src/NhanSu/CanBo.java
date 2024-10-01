@@ -19,6 +19,10 @@ public class CanBo extends NhanSu{
         this.luong = luong;
     }
 
+    public void input(){
+
+    }
+
     public void output(){
         System.out.println("===========Thong Tin Can Bo===========");
         super.output();

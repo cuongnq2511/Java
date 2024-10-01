@@ -1,5 +1,7 @@
 package NhanSu;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -222,11 +224,26 @@ public class Main {
     }
 
     public static void xapXepTenTangDanCanBo() {
+        if (canBos == null || canBos.length == 0) {
+            System.out.println("Danh sách cán bộ trống.");
+            return;
+        }
 
+        for (int i = 0; i < canBos.length - 1; i++) {
+            for (int j = i + 1; j < canBos.length; j++) {
+                if (canBos[i] != null && canBos[j] != null && canBos[i].getTen().compareTo(canBos[j].getTen()) > 0) {
+
+                    CanBo temp = canBos[i];
+                    canBos[i] = canBos[j];
+                    canBos[j] = temp;
+                }
+            }
+        }
+        System.out.println("=================Danh Sach Can Bo Sau Khi Sap Xep================");
+        hienThiDanhSachCanBo();
     }
 
 
     public static void xapXepTenTangDanCongNhan() {
-
     }
 }

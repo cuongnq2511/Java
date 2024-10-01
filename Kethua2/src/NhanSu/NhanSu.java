@@ -17,6 +17,9 @@ public class NhanSu {
         this.namSinh = namSinh;
         this.gioiTinh = gioiTinh;
     }
+    public void input(){
+
+    }
 
     public void output(){
         System.out.println("Ma NS: " + maNs);

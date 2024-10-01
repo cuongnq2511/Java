@@ -17,6 +17,10 @@ public class CongNhan extends NhanSu{
         this.luong = luong;
     }
 
+    public void input(){
+
+    }
+
     public void output(){
         System.out.println("=========Thong Tin Cong Nhan==========");
         super.output();
