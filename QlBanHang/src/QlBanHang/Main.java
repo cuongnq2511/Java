@@ -71,35 +71,37 @@ public class Main {
 
     public static void hienThiDanhSachLoaiHang(ArrayList<LoaiHang> loaiHangs) {
         System.out.println("==========Danh sách loại hàng:==========");
+        System.out.println(String.format("| %-5s | %-10s |" , "ID","Ten Loai Hang"));
         for (LoaiHang loaiHang : loaiHangs) {
-            System.out.println("ID: " + loaiHang.getId() + ", Tên Loại Hàng: " + loaiHang.getTenLoai());
+            System.out.println(String.format("| %-5s | %-10s | " , loaiHang.getId(),loaiHang.getTenLoai()));
         }
     }
 
 
     public static void hienThiDanhSachHang(ArrayList<Hang> hangs) {
         System.out.println("==========Danh sách hàng:==========");
+        System.out.println(String.format("| %-5s | %-10s | %-15s | %-10s | %-8s |" ,"ID" ,"Loai Hang ID","Ten Hang","So Luong","DOn Gia"));
         for (Hang hang : hangs) {
-            System.out.println("ID: " + hang.getId() + ", Loại Hàng ID: " + hang.getLoaiHangID() +
-                    ", Tên Hàng: " + hang.getTenHang() + ", Số Lượng: " + hang.getSoLuong() + ", Đơn Giá: " + hang.getDonGia());
+            System.out.println(String.format("| %-5s | %-12s | %-15s | %-10s | %-8s |", hang.getId() , hang.getLoaiHangID() ,
+                    hang.getTenHang() ,hang.getSoLuong() , hang.getDonGia()));
         }
     }
 
 
     public static void hienThiDanhSachKhachHang(ArrayList<KhachHang> khachHangs) {
         System.out.println("==========Danh sách khách hàng:==========");
+        System.out.println(String.format("| %-5s | %-20s | %-10s |" ,"ID","Ten Khach Hang" ,"Loai Hang ID"));
         for (KhachHang khachHang : khachHangs) {
-            System.out.println("ID: " + khachHang.getId() + ", Tên Khách Hàng: " + khachHang.getTenKhachHang()
-                    + ", Loại Hàng ID: " + khachHang.getLoaiHangID());
+            System.out.println(String.format("| %-5s | %-20s | %-12s |" ,khachHang.getId(),khachHang.getTenKhachHang(),khachHang.getLoaiHangID()));
         }
     }
 
 
     public static void hienThiGioHang(ArrayList<GioHang> gioHangs) {
         System.out.println("==========Danh sách giỏ hàng:==========");
+        System.out.println(String.format("| %-5s | %-10s | %-15s |","ID","Ten Hang","Loai Hang ID" ));
         for (GioHang gioHang : gioHangs) {
-            System.out.println("ID: " + gioHang.getId() + ", Tên Hàng: " + gioHang.getTenHang() +
-                    ", Loại Hàng ID: " + gioHang.getLoaiHangID());
+            System.out.println(String.format("| %-5s | %-10s | %-15s |" , gioHang.getId(),gioHang.getTenHang(),gioHang.getLoaiHangID()));
         }
     }
     public static void hienThiDanhSachKhachMuaHang(ArrayList<KhachHang> khachHangs, ArrayList<GioHang> gioHangs) {
