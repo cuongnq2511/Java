@@ -5,12 +5,12 @@ public class tblSinhVien {
     private String hoDem;
     private String ten;
     private int namSinh;
-    private boolean gioiTinh;
+    private String gioiTinh;
 
     public tblSinhVien() {
     }
 
-    public tblSinhVien(String maSinhVien, String hoDem, String ten, int namSinh, boolean gioiTinh) {
+    public tblSinhVien(String maSinhVien, String hoDem, String ten, int namSinh, String gioiTinh) {
         this.maSinhVien = maSinhVien;
         this.hoDem = hoDem;
         this.ten = ten;
@@ -50,11 +50,11 @@ public class tblSinhVien {
         this.namSinh = namSinh;
     }
 
-    public boolean isGioiTinh() {
+    public String getGioiTinh() {
         return gioiTinh;
     }
 
-    public void setGioiTinh(boolean gioiTinh) {
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 }
